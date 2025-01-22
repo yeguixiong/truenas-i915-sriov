@@ -44,4 +44,4 @@ incus的VM(虚拟机)和传统虚拟机功能无法直接与主机共享英特�
 ```
 incus config device add Windows iGPU pci address=0000:00:02.1
 ```
-“0000:00:02.1”为你未使用的英特尔核显sriov子设备，可以使用命令lspci查看。
+“Windows”是你想分给的VM(虚拟机)名称，“0000:00:02.1”为你未使用的英特尔核显sriov子设备，可以使用命令lspci查看。
