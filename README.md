@@ -1,0 +1,2 @@
+此内核模块基于https://github.com/strongtz/i915-sriov-dkms制作，适用于truenas scale 25.04，内核版本Linux truenas 6.12.9-production+truenas。
+
