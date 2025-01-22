@@ -1,4 +1,6 @@
 # 在truenas scale 25.04开启英特尔12-14代核显(iGPU)虚拟化sriov功能
+
+
 ## 适用范围：
 
 此内核模块基于
@@ -16,6 +18,10 @@
 rmmod -f i915 && insmod /mnt/Sys/Tool/modules/i915.ko max_vfs=7 enable_guc=3 && echo "1" > /sys/devices/pci0000:00/0000:00:02.0/sriov_numvfs
 ```
 
-请将“/mnt/Sys/Tool/modules/i915.ko”替换为你的路径，数字“1”表示虚拟出1个sriov子设备,按你自己的需求设置1-7；
+请将“/mnt/Sys/Tool/modules/i915.ko”替换为你的路径，数字“1”表示虚拟出1个sriov子设备，按你自己的需求设置1-7；
 
-3.重启。
+3.重启生效，更新系统后仍可生效。
+
+
+## 注意：
+每次重启后“虚拟化(实验性)”中会提示错误，点全局设定→保存即可恢复正常。
