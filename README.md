@@ -40,7 +40,7 @@ incus config device add Debian renderD128 unix-char gid=107 source=/dev/dri/rend
 
 “Debian”是你想共享的容器，gid=44中的44是你容器内video的组id，gid=107是你容器内render的组id，card0和renderD128如果你有多张显卡或者非英特尔核显不一定是这个文件名称，根据你的显卡设置。
 
-incus的VM(虚拟机)和传统虚拟机功能无法直接与主机共享英特尔核显，比如我使用VM功能安装了Windows，想在Windows上使用英特尔核显，同时其他容器也需要使用英特尔核显，那么就需要sriov拆分，拆分成功后使用如下命令添加到你的incus容器中：
+incus的VM(虚拟机)和传统虚拟机功能无法直接与主机共享英特尔核显，比如我使用VM功能安装了Windows，想在Windows上使用英特尔核显，同时其他容器也需要使用英特尔核显，那么就需要sriov拆分，拆分成功后使用如下命令添加到你的incus虚拟机中：
 ```
 incus config device add Windows iGPU pci address=0000:00:02.1
 ```
