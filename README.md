@@ -30,7 +30,7 @@ rmmod -f i915 && insmod /mnt/Sys/Tool/modules/i915.ko max_vfs=7 enable_guc=3 && 
 
 ## 提示：
 
-1.truenas scale 25.04 使用新的“虚拟化”(incus)功能，新的“虚拟化”分为容器(相当于LXC)和VM，如果只是想在容器上使用英特尔核显，没有必要给单独的sriov子设备，可以直接使用incus命令在主机和容器中共享显卡设备，这样即使显卡不支持sriov也可以使用，性能还更好：
+1.truenas scale 25.04 开始使用新的“虚拟化”(incus)功能，新的“虚拟化”分为容器(相当于LXC)和VM，如果只是想在容器上使用英特尔核显，没有必要给单独的sriov子设备，可以直接使用incus命令在主机和容器中共享显卡设备，这样即使显卡不支持sriov也可以使用，性能还更好：
 ```
 incus config device add Debian card0 unix-char gid=44 source=/dev/dri/card0 path=/dev/dri/card0
 ```
