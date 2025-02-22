@@ -5,7 +5,8 @@
 
 此内核模块基于
 [https://github.com/strongtz/i915-sriov-dkms](https://github.com/strongtz/i915-sriov-dkms)
-制作，适用于truenas scale 25.04/25.10，英特尔12-14代核显，内核版本Linux truenas 6.12.9-production+truenas。
+制作，适用于truenas scale 25.10，英特尔12-14代核显，内核版本Linux truenas 6.12.15-production+truenas。
+（truenas scale 25.04 6.12.9内核请使用old里的版本）
 
 
 ## 使用方法：
